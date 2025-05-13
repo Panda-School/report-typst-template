@@ -1,19 +1,18 @@
-
-#import "@preview/basic-report:0.2.0": *
+#import "../lib.typ": *
 
 #show: it => basic-report(
-  doc-category: "Betriebsanleitung",
-  doc-title: "Raketenstart für Dummies",
-  author: "Daniel Düsentrieb",
+  doc-category: "Bachelor Thesis",
+  doc-title: "Evaluation love",
+  author: "Bas van't Hazeveld",
   affiliation: "MouseTec, Entenhausen",
   logo: image("assets/aerospace-engineering.png", width: 2cm),
   // <a href="https://www.flaticon.com/free-icons/aerospace" title="aerospace icons">Aerospace icons created by gravisio - Flaticon</a>
-  language: "de",
+  language: "en",
   compact-mode: false,
   it
 )
 
-= Einleitung
+= Inleiding
 
 #lorem(120)
 
@@ -26,6 +25,8 @@
 === Raketen – Eine Übersicht
 
 #lorem(80)
+
+#pagebreak()
 
 = Dein erster Raketenstart
 
