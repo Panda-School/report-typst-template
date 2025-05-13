@@ -17,7 +17,7 @@
   // ----- Page-Setup ------------------------
   set page(
     paper: "a4",
-    margin: (top: 3cm, left: 4.5cm, right: 3cm, bottom: 4.5cm),
+    margin: (top: 3cm, left: 3cm, right: 3cm, bottom: 4.5cm),
   )
 
   // Some basic rules for the title page layout:
