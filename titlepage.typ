@@ -77,7 +77,7 @@
         text(font: heading-font, size: 1 * body-size, 
           top-edge: "ascender",
           doc-category) ),
-      box(height: 6cm,
+      box(height: 2cm,
         par(leading: 0.5em,
           text(font: heading-font, weight: "bold",
             size: 2 * body-size, fill: luma(40%).mix(heading-color),
