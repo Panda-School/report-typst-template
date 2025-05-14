@@ -7,8 +7,8 @@
 
 #show: it => basic-report(
   doc-category: "Bachelor Thesis",
-  doc-title: "Evaluating Complex Natural Language Counterfactual Image Generation Using Stable Diffusion and Lightweight Adaptation Methods",
-  title-size: 20pt,
+  doc-title: "Open-Domain Counterfactual Image Generation from Neutral Natural Language Descriptions",
+  title-size: 25pt,
   author: "Bas van't Hazeveld (7341628)",
   affiliation: "BSc Artificial Intelligence, UU",
   first-examiner: "Prof. Dr. Denis Paperno",
