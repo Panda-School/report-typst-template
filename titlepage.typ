@@ -1,13 +1,52 @@
 // ===== Functions for TITLE PAGE and COMPACT TITLE ===============
 
+// -- Abstract Function: `abstract` ----------------------
+
+#let abstract-function(
+  title: "Abstract",
+  body: none,
+  keywords: (),
+  compact-mode: false,
+) = {
+  if(not compact-mode) {
+    pagebreak()
+  }
+  if(title != none and not compact-mode) {
+    heading(outlined: false, level: 1, numbering: none)[
+      #title
+    ]
+  }
+
+  body 
+  linebreak()
+  box(height: 14pt)
+
+  if (keywords != ()) {
+    strong("Keywords:")
+    for word in keywords {
+      if(word != keywords.last()) {
+        text(" " + word + ",")
+      } else {
+        text(" " + word)
+      }
+    }
+  }
+
+  if(not compact-mode) {
+    pagebreak()
+  }
+}
 
 // ===== TITLE PAGE: `titlepage` ====================
 
 #let titlepage(
   doc-category,
   doc-title,
+  title-size,
   author,
   affiliation,
+  first-examiner,
+  second-examiner,
   logo,
   heading-font,             // the heading-font is also used for all text on the titlepage
   heading-color,            // heading-color applies as well for the title
@@ -39,7 +78,7 @@
       doc-category),
   )
 
-  text(font: heading-font, weight: "light", size: 36pt,  fill: heading-color,
+  text(font: heading-font, weight: "light", size: title-size,  fill: heading-color,
     doc-title,
   )
 
@@ -48,11 +87,22 @@
   
   place(
     bottom + left,
-    text(
+    stack(
+      dir: ltr,
+      spacing: 1fr,
+      text(
       font: heading-font, weight: "regular", size: info-size, fill: black,
       datetime.today().display("[day].[month].[year]") + str("\n") + 
       author + str("\n") + 
       affiliation),
+      text(
+        font: heading-font, weight: "regular", size: info-size, fill: black,
+        strong("Supervisor") + str("\n") +
+        first-examiner + str("\n") +
+        strong("Second Reader") + str("\n") +
+        second-examiner
+      )
+    )
   )
 
 }
@@ -65,6 +115,7 @@
   author,
   affiliation,
   logo,
+  abstract: none,
   heading-font,             // the heading-font is also used for all text on the titlepage
   heading-color,            // heading-color applies as well for the title
   info-size,                // used throughout the document for "info text"
@@ -90,5 +141,14 @@
           datetime.today().display("[day].[month].[year]")
         )  
       ),
+      v(4cm),
+      box(
+        abstract-function(
+        title: "Abstract",
+        body: abstract.body,
+        keywords: abstract.keywords,
+        compact-mode: true,
+      ) 
+      )     
     )
 }

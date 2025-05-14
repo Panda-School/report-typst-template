@@ -6,9 +6,13 @@
 #let basic-report(
   doc-category: none,
   doc-title: none,
+  title-size: 36pt,
   author: none,
   affiliation: none,
+  first-examiner: none,
+  second-examiner: none,
   logo: none,
+  abstract: none,
   language: "de",
   show-outline: true,
   compact-mode: false,
@@ -43,8 +47,11 @@
     titlepage(
       doc-category,
       doc-title,
+      title-size,
       author,
       affiliation,
+      first-examiner,
+      second-examiner,
       logo,
       heading-font,
       heading-color,
@@ -183,6 +190,14 @@
     )
   }
 
+  if(abstract != none and not compact-mode) {
+    abstract-function(
+      title: "Abstract",
+      body: abstract.body,
+      keywords: abstract.keywords,
+    )
+  }
+
   if (show-outline and not compact-mode) {
     outline(
       title: if language == "de" { 
@@ -229,6 +244,7 @@
       author,
       affiliation,
       logo,
+      abstract: abstract,
       heading-font,             
       heading-color,            
       info-size,                

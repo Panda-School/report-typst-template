@@ -1,10 +1,19 @@
 #import "../lib.typ": *
 
+#let abstractDict = (
+  body: lorem(150),
+  keywords: ("Hey", "How", "Are", "You?")
+)
+
 #show: it => basic-report(
   doc-category: "Bachelor Thesis",
-  doc-title: "Evaluation love",
-  author: "Bas van't Hazeveld",
-  affiliation: "MouseTec, Entenhausen",
+  doc-title: "Evaluating Complex Natural Language Counterfactual Image Generation Using Stable Diffusion and Lightweight Adaptation Methods",
+  title-size: 20pt,
+  author: "Bas van't Hazeveld (7341628)",
+  affiliation: "BsC Artificial Intelligence, UU",
+  first-examiner: "Prof. Dr. Denis Paperno",
+  second-examiner: "Dr. Ece Takmaz",
+  abstract: abstractDict,
   logo: image("assets/aerospace-engineering.png", width: 2cm),
   // <a href="https://www.flaticon.com/free-icons/aerospace" title="aerospace icons">Aerospace icons created by gravisio - Flaticon</a>
   language: "en",
@@ -12,7 +21,7 @@
   it
 )
 
-= Inleiding
+= Introduction
 
 #lorem(120)
 
@@ -28,15 +37,15 @@
 
 #pagebreak()
 
-= Dein erster Raketenstart
+= Methodology
 
 #lorem(150)
 
-== Wie du in die Rakete einsteigst
+== Data collection
 
 #lorem(90)
 
-== Das Cockpit
+== Data analysis
 
 #lorem(120)
 
@@ -44,5 +53,21 @@
 === Die wichtigsten Knöpfe und Hebel
 
 #lorem(50)
+
+#pagebreak()
+
+= Results
+
+#pagebreak()
+
+= Discussion
+
+#pagebreak()
+
+= Conclusion
+
+#pagebreak()
+
+= Discussion
 
 
