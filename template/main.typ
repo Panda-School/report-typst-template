@@ -10,7 +10,7 @@
   doc-title: "Evaluating Complex Natural Language Counterfactual Image Generation Using Stable Diffusion and Lightweight Adaptation Methods",
   title-size: 20pt,
   author: "Bas van't Hazeveld (7341628)",
-  affiliation: "BsC Artificial Intelligence, UU",
+  affiliation: "BSc Artificial Intelligence, UU",
   first-examiner: "Prof. Dr. Denis Paperno",
   second-examiner: "Dr. Ece Takmaz",
   abstract: abstractDict,
