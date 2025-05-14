@@ -71,4 +71,8 @@
 
 = Discussion
 
+#pagebreak()
+
+#bibliography("ref.bib", style: "american-psychological-association", full: true)
+
 

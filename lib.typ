@@ -26,7 +26,6 @@
   set document(title: doc-title, author: author)
   set text(lang: language)
 
-
   let body-font = "Vollkorn"
   let body-size = 11pt
   // let heading-font = "Ubuntu"
@@ -129,11 +128,12 @@
   // ----- Headings & Numbering Schemes ------------------------
 
   set heading(numbering: "1.1")
+  show bibliography: set heading(numbering: none)
   show heading: set text(font: heading-font, fill: heading-color, 
       weight: if compact-mode {"bold"} else {"regular"})
 
   show heading.where(level: 1): it => {
-    if(not in-outline.get()) {
+    if(not in-outline.get() and it.body != [Bibliography]) {
       block(height: 4em)
       set align(right)
       stack(
