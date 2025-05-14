@@ -48,12 +48,12 @@
 
 == Data analysis
 
-#lorem(120)
+#lorem(500)
 
 
 === Die wichtigsten Knöpfe und Hebel
 
-#lorem(50)
+#lorem(150)
 
 #pagebreak()
 
