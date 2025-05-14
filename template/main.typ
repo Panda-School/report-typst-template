@@ -14,6 +14,7 @@
   first-examiner: "Prof. Dr. Denis Paperno",
   second-examiner: "Dr. Ece Takmaz",
   abstract: abstractDict,
+  heading-color: rgb("#C00A35"),
   logo: image("assets/aerospace-engineering.png", width: 2cm),
   // <a href="https://www.flaticon.com/free-icons/aerospace" title="aerospace icons">Aerospace icons created by gravisio - Flaticon</a>
   language: "en",
